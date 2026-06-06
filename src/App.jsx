@@ -5,7 +5,7 @@ import HeroSection from './components/HeroSection'
 const App = () => {
   return (
     <div className='min-w-300'>
-      {/* <HeroSection/> */}
+      <HeroSection/>
       <EyeSection/>
     </div>
   )

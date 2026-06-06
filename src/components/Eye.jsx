@@ -8,11 +8,19 @@ const Eye = ({side, emotion="normal"}) => {
   const eyelidRef = useRef(null);
 
   const states = {
+    happy:{
+      irisGradient:
+      "radial-gradient(circle,#15803d 20%,#4ade80 50%,#15803d 80%,#14532d 90%)",
+      pupilSize: 56,
+      eyelidOffset: -100,
+      eyelidFollow: 0,
+      eyelidRotate: 0,
+    },
     normal: {
       irisGradient:
         "radial-gradient(circle, #005E5E 20%, #02cece 50%, #005E5E 80%, #004343 90%)",
       pupilSize: 48,
-      eyelidOffset: -100,
+      eyelidOffset: -70,
       eyelidFollow: 0,
       eyelidRotate: 0,
     },
@@ -152,7 +160,7 @@ const Eye = ({side, emotion="normal"}) => {
         className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-black"
         style={{
           background:
-            "radial-gradient(circle, #FFFFFF 60%, #111111 90%)",
+            "radial-gradient(circle, #FFFFFF 50%, #111111 85%)",
         }}
       >
         {/* Eyelid */}
