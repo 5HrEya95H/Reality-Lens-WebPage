@@ -28,7 +28,7 @@ const Eye = ({side, emotion="normal"}) => {
     suspicious: {
       irisGradient:
         "radial-gradient(circle, #7A6500 20%, #FFD700 50%, #B8860B 80%, #7A6500 90%)",
-      pupilSize: 36,
+      pupilSize: 40,
       eyelidOffset: -30,
       eyelidFollow: 1,
       eyelidRotate: 0,
@@ -37,7 +37,7 @@ const Eye = ({side, emotion="normal"}) => {
     angry: {
       irisGradient:
         "radial-gradient(circle, #5C0000 20%, #FF3B3B 50%, #8B0000 80%, #5C0000 90%)",
-      pupilSize: 24,
+      pupilSize: 32,
       eyelidOffset: -30,
       eyelidFollow: 1,
       eyelidRotate: side === "left" ? -15 : 15,
@@ -159,7 +159,7 @@ const Eye = ({side, emotion="normal"}) => {
     <div>
       <div
         ref={eyeRef}
-        className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-black"
+        className="relative w-40 h-40 rounded-full overflow-hidden border-2 border-black"
         style={{
           background:
             "radial-gradient(circle, #FFFFFF 40%, #111111 85%)",

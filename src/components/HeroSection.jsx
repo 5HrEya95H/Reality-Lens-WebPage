@@ -3,6 +3,9 @@ import Button from './Button';
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react';
 
+import SplitText from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
+
 const HeroSection = () => {
 
   const [platform, setPlatform] = useState("windows(cloud)");
@@ -26,18 +29,27 @@ const HeroSection = () => {
       duration:1,
       ease: "power1.inOut",
     },"<");
-    tl.from('#headHero',{
+
+    const headHeroSplit = new SplitText("#headHero",{type:"words"});
+    const paraHeroSplit = new SplitText("#paraHero",{type:"lines"});
+
+    tl.from(headHeroSplit.words,{
       opacity:0,
       yPercent: 10,
       duration: 1,
-      ease:"power1.inOut"
+      ease:"power1.inOut",
+      stagger: 0.1,
     },"-=0.5");
-    tl.from('#paraHero',{
+
+
+    tl.from(paraHeroSplit.lines,{
       opacity:0,
       yPercent: 10,
       duration: 1,
-      ease:"power1.inOut"
+      ease:"power1.inOut",
+      stagger: 0.1,
     },"-=0.5");
+
     tl.from("#buttons",{
       opacity:0,
       duration: 1,
