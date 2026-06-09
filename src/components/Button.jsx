@@ -1,17 +1,17 @@
-import React from 'react'
-
-const Button = ({type,text}) => {
+const Button = ({type,text, children, className = "", onClick}) => {
 
     if(type==="Solid"){
         return (
           <button
-            className="
+            type="button"
+            onClick={onClick}
+            className={className || `
                 px-2  max-h-12
                 h-[8vw] w-[30vw]
                 rounded-full
                 text-white
                 
-                bg-cyan-800
+                bg-cyan-700
                 border border-cyan-300/20
           
                 hover:border-cyan-100
@@ -24,9 +24,9 @@ const Button = ({type,text}) => {
                 text-[3vw] md:text-lg
                 md:w-52 md:px-6
                 
-                hover:cursor-pointer"
+                hover:cursor-pointer`}
             >
-            {text}
+            {children || text}
         </button>
         )
     }
