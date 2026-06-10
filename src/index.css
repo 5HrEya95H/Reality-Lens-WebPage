@@ -17,3 +17,27 @@ h5,
 h6 {
   font-family: var(--font-heading);
 }
+
+html,
+body,
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(125, 125, 125);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 82, 82);
+}

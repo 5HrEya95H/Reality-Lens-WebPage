@@ -209,7 +209,7 @@ const EyeSection = () => {
 
             <img
                 src="/images/Gradients/EyeSection/right-bot.png"
-                className="absolute scale-150 bottom-0 -right-14 w-[48vw] h-[48vw] z-10 pointer-events-none"
+                className="absolute scale-150 bottom-0 -right-14 w-[48vw] h-[48vw] z-10 pointer-events-none overflow-hidden"
             />
 
             <img

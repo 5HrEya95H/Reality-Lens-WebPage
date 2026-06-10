@@ -4,11 +4,12 @@ import HeroSection from './components/HeroSection'
 import FeaturesSection from './components/FeaturesSection'
 import DataSection from './components/DataSection'
 import HowToSection from './components/HowToSection'
-
+import LenisProvider from './components/LenisProvider'
 
 const App = () => {
   return (
-    <div className='relative min-w-300 bg-black w-[100vw] overflow-hidden'>
+    <div className='relative bg-black w-screen overflow-hidden'>
+      <LenisProvider/>
       <div
         className="absolute inset-0 opacity-20 z-0 pointer-events-none"
         style={{

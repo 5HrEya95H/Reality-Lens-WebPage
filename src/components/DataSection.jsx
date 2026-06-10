@@ -6,7 +6,7 @@ const DataSection = () => {
     <div className='w-screen flex overflow-visible justify-center items-center text-white relative -top-36'>
         <img
                 src="/images/Gradients/EyeSection/top-left.png"
-                className="absolute -left-18 top-16 w-[30vw] h-[50vw] z-10 pointer-events-none"
+                className=" overflow-hidden absolute -left-18 top-16 w-[30vw] h-[50vw] z-10 pointer-events-none"
             />
 
 
