@@ -8,42 +8,42 @@ const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
   {
-    color: '#120F17',
-    title: 'Analytics',
-    description: 'Track user behavior',
-    label: 'Insights'
+    color: '#022A2A',
+    title: 'Fast and Lightweight',
+    description: 'Negligible operation load. Stays out of your way until you need it.',
+    label: ''
+  },
+   {
+    color: '#022A2A',
+    title: 'High DPI Accuracy',
+    description: 'Supports 4K UIX pipelines with sub-pixel sampling precision.',
+    label: ''
   },
   {
-    color: '#120F17',
-    title: 'Dashboard',
-    description: 'Centralized data view',
-    label: 'Overview'
+    color: '#022A2A',
+    title: 'Native Windows Integration',
+    description: 'Built specifically for Windows 10/11 using Python and PyQt5 for a clean native desktop experience.',
+    label: ''
+  },
+    {
+    color: '#022A2A',
+    title: 'Modular AI Architecture',
+    description: 'Flexible structure made of Python, PYQT6, Gemini AI, Phash/Clip for faster and reliable results.',
+    label: ''
   },
   {
-    color: '#120F17',
-    title: 'Collaboration',
-    description: 'Work together seamlessly',
-    label: 'Teamwork'
+    color: '#022A2A',
+    title: 'Privacy-First Processing',
+    description: 'Secure analysis workflows so sensitive visuals remain protected.',
+    label: ''
   },
   {
-    color: '#120F17',
-    title: 'Automation',
-    description: 'Streamline workflows',
-    label: 'Efficiency'
+    color: '#022A2A',
+    title: 'Real-Time Analysis',
+    description: 'Reality Lens analyses light differences, JPEG artifacts, and Geometry instantly.',
+    label: ''
   },
-  {
-    color: '#120F17',
-    title: 'Integration',
-    description: 'Connect favorite tools',
-    label: 'Connectivity'
-  },
-  {
-    color: '#120F17',
-    title: 'Security',
-    description: 'Enterprise-grade protection',
-    label: 'Protection'
-  }
-];
+  ];
 
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
   const el = document.createElement('div');
@@ -450,7 +450,7 @@ const GlobalSpotlight = ({
 
 const BentoCardGrid = ({ children, gridRef }) => (
   <div
-    className="bento-section grid gap-2 p-3 max-w-[54rem] select-none relative"
+    className="bento-section grid gap-2 p-3 max-w-[80vw] leading-tight select-none relative"
     style={{ fontSize: 'clamp(1rem, 0.9rem + 0.5vw, 1.5rem)' }}
     ref={gridRef}
   >
@@ -500,7 +500,7 @@ const MagicBento = ({
             --glow-intensity: 0;
             --glow-radius: 200px;
             --glow-color: ${glowColor};
-            --border-color: #2F293A;
+            --border-color: #005E5E;
             --background-dark: #120F17;
             --white: hsl(0, 0%, 100%);
             --purple-primary: rgba(132, 0, 255, 1);
@@ -660,16 +660,17 @@ const MagicBento = ({
                   clickEffect={clickEffect}
                   enableMagnetism={enableMagnetism}
                 >
-                  <div className="card__header flex justify-between gap-3 relative text-white">
-                    <span className="card__label text-base">{card.label}</span>
-                  </div>
-                  <div className="card__content flex flex-col relative text-white">
-                    <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
+                  <div className="card__content flex flex-col justify-between h-full relative text-white">
+                    <h3
+                      className="card__title font-bold"
+                      style={{
+                        fontSize: "clamp(1.25rem, 1rem + 1vw, 2rem)"
+                      }}
+                    >
                       {card.title}
                     </h3>
-                    <p
-                      className={`card__description text-xs leading-5 opacity-90 ${textAutoHide ? 'text-clamp-2' : ''}`}
-                    >
+
+                    <p className="card__description text-sm leading-tight opacity-90 ">
                       {card.description}
                     </p>
                   </div>

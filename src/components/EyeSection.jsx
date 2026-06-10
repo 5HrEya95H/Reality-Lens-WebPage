@@ -156,7 +156,7 @@ const EyeSection = () => {
             md:text-3xl
             lg:text-4xl
             font-black
-            leading-[1.25]
+            leading-tight
             text-white
             text-center
             max-w-4xl
