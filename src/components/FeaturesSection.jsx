@@ -1,13 +1,50 @@
-import React from 'react'
+import React, { useRef, useLayoutEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import MagicBento from './MagicBento'
 
+gsap.registerPlugin(ScrollTrigger)
 
+const FeaturesSection = () => {
+  const sectionRef = useRef(null)
 
-const CardsSection = () => {
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.animate-item',
+        {
+          opacity: 0,
+          y: 30,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power1.inOut',
+          stagger: 1,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 50%',
+            toggleActions: 'play none none none',
+          },
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <div className='bg-transparent  w-screen flex flex-col mt-12 gap-12 justify-center items-center text-white'>
-        <h2 className='text-2xl md:text-4xl lg:text-6xl font-heading'>Why Reality Lens?</h2>
-        <MagicBento 
+    <div
+      ref={sectionRef}
+      className="bg-transparent relative mt-24 w-screen flex flex-col gap-12 justify-center items-center text-white"
+    >
+      <h2 className="animate-item text-2xl md:text-4xl lg:text-6xl font-heading">
+        Why Reality Lens?
+      </h2>
+
+      <div className="animate-item">
+        <MagicBento
           textAutoHide={true}
           enableStars
           enableSpotlight
@@ -20,8 +57,9 @@ const CardsSection = () => {
           glowColor="0, 255, 255"
           disableAnimations={false}
         />
+      </div>
     </div>
   )
 }
 
-export default CardsSection
+export default FeaturesSection
