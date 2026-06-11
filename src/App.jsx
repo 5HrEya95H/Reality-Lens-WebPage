@@ -5,8 +5,8 @@ import FeaturesSection from './components/FeaturesSection'
 import DataSection from './components/DataSection'
 import HowToSection from './components/HowToSection'
 import LenisProvider from './components/LenisProvider'
-import CTA from './components/CTA'
 import Footer from './components/Footer'
+import CTASection from './components/CTASection'
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
       <EyeSection/>
       <HowToSection/>
       <FeaturesSection/>
-      {/* <CTA/> */}
+      <CTASection/>
       <Footer/>
     </div>
   )
