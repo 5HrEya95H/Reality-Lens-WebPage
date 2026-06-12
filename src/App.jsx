@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import EyeSection from './components/EyeSection'
 import HeroSection from './components/HeroSection'
 import FeaturesSection from './components/FeaturesSection'
@@ -7,8 +7,11 @@ import HowToSection from './components/HowToSection'
 import LenisProvider from './components/LenisProvider'
 import Footer from './components/Footer'
 import CTASection from './components/CTASection'
+import LoadingScreen from './components/LoadingScreen'
 
 const App = () => {
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   return (
     <div className='relative bg-black w-screen overflow-hidden'>
       <LenisProvider/>
@@ -18,9 +21,11 @@ const App = () => {
           backgroundImage: "url('/images/Stars.jpg')",
           backgroundRepeat: "repeat",
           backgroundSize: "800px",
+          zIndex: 2,
         }}
       />      
-      <HeroSection/>
+      <LoadingScreen isImageLoaded={isImageLoaded} />
+      <HeroSection isImageLoaded={isImageLoaded} setIsImageLoaded={setIsImageLoaded}/>
       <DataSection/>
       <EyeSection/>
       <HowToSection/>
