@@ -75,8 +75,7 @@ const CTASection = () => {
             </h2>
 
             <p className="max-w-xl text-sm leading-relaxed text-slate-300 md:text-base">
-              RealityLens v1.0 is now available for Windows. No installation
-              required — simply download, launch, and start exploring the world
+              RealityLens v1.0 is now available for Windows and Mac. Simply download and install and start exploring the world
               through AI-powered vision.
             </p>
 
@@ -89,7 +88,7 @@ const CTASection = () => {
             />
 
             <p className="text-xs uppercase tracking-[0.15em] text-slate-400">
-              Size 24MB • No installation required • Windows 10/11
+              Size 244MB • Windows 10/11 and Mac
             </p>
           </div>
         </div>

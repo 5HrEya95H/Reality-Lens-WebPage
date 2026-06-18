@@ -22,13 +22,13 @@ const cardData = [
   {
     color: '#155e7550',
     title: 'Native Windows Integration',
-    description: 'Built specifically for Windows 10/11 using Python and PyQt5 for a clean native desktop experience.',
+    description: 'Built specifically for Windows 10/11 using Python and PyQt6 for a clean native desktop experience.',
     label: ''
   },
     {
     color: '#155e7550',
     title: 'Modular AI Architecture',
-    description: 'Flexible structure made of Python, PYQT6, Gemini AI, Phash/Clip for faster and reliable results.',
+    description: 'Flexible structure made of Python, PyQt6, Groq API, Phash/Clip for faster and reliable results.',
     label: ''
   },
   {
